@@ -1,0 +1,16 @@
+<span
+    class="preview-color"
+    [class.disabled]="disabled"
+    [style.width.px]="size"
+    [style.height.px]="size"
+    [style.background-color]="value"
+    (click)="inputColorRef.click()">
+</span>
+
+<input
+    #inputColorRef
+    type="color"
+    class="hidden-input"
+    [disabled]="disabled"
+    [ngModel]="value"
+    (ngModelChange)="value = $event; notifyValueChanged()">

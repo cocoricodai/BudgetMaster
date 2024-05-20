@@ -1,0 +1,5 @@
+<input
+    type="text"
+    [placeholder]="hasPlaceholder ? placeholder : ''"
+    [ngModel]="value"
+    (ngModelChange)="value = $event">
