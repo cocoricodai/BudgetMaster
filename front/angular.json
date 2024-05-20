@@ -5,7 +5,11 @@
   "projects": {
     "front": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,7 +29,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              {
+                "input": "src/assets/themes/light.css",
+                "bundleName": "light",
+                "inject": false
+              },
+              {
+                "input": "src/assets/themes/dark.css",
+                "bundleName": "dark",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -87,7 +101,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
